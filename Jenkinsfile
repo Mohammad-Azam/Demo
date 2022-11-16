@@ -20,7 +20,12 @@ pipeline {
 
         stage('Build2') {
           steps {
-            emailext(subject: 'Jenkins Extended plugin ', body: 'this is for testing email using new plugin ', attachLog: true, from: 'inform2me1137@gmail.com', to: 'mohdazam77229@gmail.com', compressLog: true)
+           emailext attachLog: true, body: '''Hi Koder,
+
+                                                    This is for the jenkins email notification 
+
+                                                    Regards,
+                                                    Jenkins Admin''', compressLog: true, subject: 'Jenkins Extended mail ', to: 'copypaste.koder'
           }
         }
 
