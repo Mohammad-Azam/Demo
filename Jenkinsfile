@@ -20,7 +20,7 @@ pipeline {
                                                     This is for the jenkins email notification 
 
                                                     Regards,
-                                                    Jenkins Admin''', compressLog: true, subject: 'Jenkins Extended mail ', to: 'copypaste.koder')
+                                                    Jenkins Admin''', compressLog: true, subject: 'Jenkins Extended mail ', to: 'copypaste.koder@gmail.com')
           }
         }
 
