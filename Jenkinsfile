@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Hello'
-        timestamps()
+        echo 'Hello2'
       }
     }
 
