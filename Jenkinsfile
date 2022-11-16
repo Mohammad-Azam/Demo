@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'centos'
-    }
-
-  }
+  agent any
   stages {
     stage('Build') {
       parallel {
@@ -20,12 +15,12 @@ pipeline {
 
         stage('Build2') {
           steps {
-           emailext attachLog: true, body: '''Hi Koder,
+            emailext(attachLog: true, body: '''Hi Koder,
 
                                                     This is for the jenkins email notification 
 
                                                     Regards,
-                                                    Jenkins Admin''', compressLog: true, subject: 'Jenkins Extended mail ', to: 'copypaste.koder'
+                                                    Jenkins Admin''', compressLog: true, subject: 'Jenkins Extended mail ', to: 'copypaste.koder')
           }
         }
 
